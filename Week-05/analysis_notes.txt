@@ -1,0 +1,44 @@
+LAB ANALYSIS NOTES
+
+1. PRETRAINED WORD VECTORS
+The experiment uses GloVe Wiki-Gigaword 50-dimensional pretrained vectors.
+Each word is represented by a 50-dimensional numerical vector.
+
+2. VECTOR ARITHMETIC
+The experiment demonstrates:
+- king - man + woman
+- paris - france + italy
+- computer - software + hardware
+
+The nearest words returned by the model should be interpreted as approximate semantic
+relationships. The exact top result is model-dependent.
+
+3. PCA
+Ten technology-domain words are selected:
+computer, software, hardware, internet, network, server, database,
+programming, algorithm, security.
+
+PCA reduces their 50-dimensional vectors to two principal components.
+
+Possible interpretation:
+- computer/software/programming/algorithm may occupy related regions because
+  they occur in overlapping technical contexts.
+- network/internet/server may show proximity because these terms commonly occur
+  together in networking and infrastructure contexts.
+- database/security may form their own local relationships depending on the
+  pretrained corpus.
+- hardware may be separated from some software-oriented terms because its contexts
+  differ.
+
+Do not claim that a cluster exists unless the generated plot actually supports it.
+The final report should describe the observed plot.
+
+4. SEMANTIC SIMILARITY
+The program uses cosine similarity to retrieve five nearest words.
+Higher cosine similarity indicates greater directional similarity between vectors.
+
+5. CONCLUSION
+Pretrained embeddings allow semantic relationships to be represented numerically.
+Vector arithmetic demonstrates relationship-based reasoning, PCA provides a visual
+view of the embedding space, and cosine similarity enables a simple semantic
+search system.
